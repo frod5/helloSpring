@@ -6,7 +6,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.Optional;
 
 public class MemoryMemberRepositoryTest {
     MemoryMemberRepository memoryMemberRepository = new MemoryMemberRepository();
@@ -65,7 +64,7 @@ public class MemoryMemberRepositoryTest {
         member4.setName("spring4");
         memoryMemberRepository.save(member4);
 
-        List<Member> resultList = memoryMemberRepository.findByAll();
+        List<Member> resultList = memoryMemberRepository.findAll();
 
         Assertions.assertThat(resultList.size()).isEqualTo(4);
     }

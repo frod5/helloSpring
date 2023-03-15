@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-@Service
 public class MemberService {
 
     private final MemberRepository repository;
@@ -31,7 +30,7 @@ public class MemberService {
     }
 
     public List<Member> findMembers() {
-        return repository.findByAll();
+        return repository.findAll();
     }
 
     public Optional<Member> findOne(Long id) {
